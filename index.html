@@ -6,60 +6,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>远程遥控器</title>
   <style>
-     body{
-       border: 1px pink solid;
-       height: 95vh
-     }
-	  h5{
-	  font-size:12px;
-	  }
-     h3{
+    body {
+      border: 1px pink solid;
+      height: 95vh
+    }
+
+    h3 {
       text-align: center;
-     }
-     div input{
-       display: block;
-       position: relative;
-       left: 34%;
-       background: white;
-       border: 1px pink solid;
-       height: 12vw;
-       width: 30vw;
-       margin-bottom: 5vw;
-     }
-     div input:active{
-       background: #E9E2E2
-     }
+    }
+
+    .div1 {
+      position: relative;
+      position: absolute;
+      left: calc(50% - 11vh);
+
+    }
+
+    div input {
+      display: block;
+      /*position: relative;
+       left: 14vh;*/
+      background: white;
+      border: 1px pink solid;
+      height: 8vh;
+      width: 22vh;
+      margin-bottom: 3vh;
+    }
+
+    div input:active {
+      background: #E9E2E2
+    }
   </style>
 </head>
 
 <body>
-<h3>远程遥控器</h3>
-	<h5>是什么的遥控器呢？</h5>
-<div style="height: 50vw"></div>
-<div>
-  <!--不会js行内写法应付一下-->
-  <input id="button1" onclick="bt1()" value="强烈" type="button">
-  <input onclick="bt1()" value="轻微" type="button">
-  <input onclick="bt1()" value="关闭" type="button">
-</div>
-<script>
 
-//书写格式如下：
-function tiao () {
-  window.location.href="https://b23.tv/HtSnMl3"
-}
-	function bt1(){
-	  
-	  if (navigator.vibrate) {
-    navigator.vibrate(200);
-} else if (navigator.webkitVibrate) {
-    navigator.webkitVibrate(200);
-}
-setTimeout("tiao()","2000"); 
-	}
-// 我是怎么在一无所知的情况下把百度的代码合在一起的....
-// 然后然后...百度不到了
-</script>
+  <h3>远程遥控器</h3>
+  <div style="height: 30vh"></div>
+  <div class="div1">
+    <!--不会js行内写法应付一下-->
+    <!--不是说行内吗?-->
+    <input id="button1" onclick="bt1()" value="强烈" type="button">
+    <input onclick="bt1()" value="轻微" type="button">
+    <input onclick="bt1()" value="关闭" type="button">
+  </div>
+  <script>
+    //书写格式如下：
+    function tiao() {
+      window.location.href = "https://b23.tv/rLEY2Li"
+    }
+
+    function bt1() {
+
+      if (navigator.vibrate) {
+        navigator.vibrate(200);
+      } else if (navigator.webkitVibrate) {
+        navigator.webkitVibrate(200);
+      }
+      setTimeout("tiao()", "2000");
+    }
+    // 我是怎么在一无所知的情况下把百度的代码合在一起的....
+    // 然后然后...百度不到了
+  </script>
 </body>
 
 </html>
